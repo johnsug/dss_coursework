@@ -1,4 +1,4 @@
-## this folder contains deliverables for course project for the "Getting and Cleaning Data" course of the JHU/Coursera Data Science specialization.
+#### This folder contains my deliverables for course project for the "Getting and Cleaning Data" course of the JHU/Coursera Data Science specialization.
 
 file # | file name | description
 -------|-----------|-------------
