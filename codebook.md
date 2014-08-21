@@ -1,69 +1,70 @@
-"feature"	"description"
-"1"	"activity"	"Activity type: Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying"
-"2"	"subject"	"Subject number (1-30)"
-"3"	"time_signal_body_acc_mean_x_axis"	"Average time domain signals of the body, recorded by the x-axis of the phone's accelerometer"
-"4"	"time_signal_body_acc_mean_y_axis"	"Average time domain signals of the body, recorded by the y-axis of the phone's accelerometer"
-"5"	"time_signal_body_acc_mean_z_axis"	"Average time domain signals of the body, recorded by the z-axis of the phone's accelerometer"
-"6"	"time_signal_gravity_acc_mean_x_axis"	"Average time domain signals of the body's gravity, recorded by the x-axis of the phone's gyroscope"
-"7"	"time_signal_gravity_acc_mean_y_axis"	"Average time domain signals of the body's gravity, recorded by the y-axis of the phone's gyroscope"
-"8"	"time_signal_gravity_acc_mean_z_axis"	"Average time domain signals of the body's gravity, recorded by the z-axis of the phone's gyroscope"
-"9"	"time_signal_body_acc_jerk_mean_x_axis"	"Average jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer"
-"10"	"time_signal_body_acc_jerk_mean_y_axis"	"Average jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer"
-"11"	"time_signal_body_acc_jerk_mean_z_axis"	"Average jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer"
-"12"	"time_signal_body_gyro_mean_x_axis"	"Average time domain signals of the body, recorded by the x-axis of the phone's gyroscope"
-"13"	"time_signal_body_gyro_mean_y_axis"	"Average time domain signals of the body, recorded by the y-axis of the phone's gyroscope"
-"14"	"time_signal_body_gyro_mean_z_axis"	"Average time domain signals of the body, recorded by the z-axis of the phone's gyroscope"
-"15"	"time_signal_body_gyro_jerk_mean_x_axis"	"Average jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's gyroscope"
-"16"	"time_signal_body_gyro_jerk_mean_y_axis"	"Average jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's gyroscope"
-"17"	"time_signal_body_gyro_jerk_mean_z_axis"	"Average jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's gyroscope"
-"18"	"time_signal_body_acc_mag_mean"	"Average value of the magnitude of the time domain signals of the body, recorded by the phone's accelerometer"
-"19"	"time_signal_gravity_acc_mag_mean"	"Average value of the magnitude of the time domain signals of the body's gravity, recorded by the phone's gyroscope"
-"20"	"time_signal_body_acc_jerk_mag_mean"	"Average value of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer"
-"21"	"time_signal_body_gyro_mag_mean"	"Average value of the magnitude of the time domain signals of the body, recorded by the phone's gyroscope"
-"22"	"time_signal_body_gyro_jerk_mag_mean"	"Average value of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope"
-"23"	"frequency_signal_body_acc_mean_x_axis"	"Average value of the frequency domain signals, of the body, recorded by the x-axis of the phone's accelerometer"
-"24"	"frequency_signal_body_acc_mean_y_axis"	"Average value of the frequency domain signals, of the body, recorded by the y-axis of the phone's accelerometer"
-"25"	"frequency_signal_body_acc_mean_z_axis"	"Average value of the frequency domain signals, of the body, recorded by the z-axis of the phone's accelerometer"
-"26"	"frequency_signal_body_acc_jerk_mean_x_axis"	"Average value of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer"
-"27"	"frequency_signal_body_acc_jerk_mean_y_axis"	"Average value of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer"
-"28"	"frequency_signal_body_acc_jerk_mean_z_axis"	"Average value of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer"
-"29"	"frequency_signal_body_gyro_mean_x_axis"	"Average value of the frequency domain signals, of the body, recorded by the x-axis of the phone's gyroscope"
-"30"	"frequency_signal_body_gyro_mean_y_axis"	"Average value of the frequency domain signals, of the body, recorded by the y-axis of the phone's gyroscope"
-"31"	"frequency_signal_body_gyro_mean_z_axis"	"Average value of the frequency domain signals, of the body, recorded by the z-axis of the phone's gyroscope"
-"32"	"frequency_signal_body_acc_mag_mean"	"Average value of the magnitude of the frequency domain signals of the body, recorded by the phone's accelerometer"
-"33"	"frequency_signal_body_body_acc_jerk_mag_mean"	"Average value of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer"
-"34"	"frequency_signal_body_body_gyro_mag_mean"	"Average value of the magnitude of the frequency domain signals of the body, recorded by the phone's gyroscope"
-"35"	"frequency_signal_body_body_gyro_jerk_mag_mean"	"Average value of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope"
-"36"	"time_signal_body_acc_st_dev_x_axis"	"Standard deviation of the time domain signals of the body, recorded by the x-axis of the phone's accelerometer"
-"37"	"time_signal_body_acc_st_dev_y_axis"	"Standard deviation of the time domain signals of the body, recorded by the y-axis of the phone's accelerometer"
-"38"	"time_signal_body_acc_st_dev_z_axis"	"Standard deviation of the time domain signals of the body, recorded by the z-axis of the phone's accelerometer"
-"39"	"time_signal_gravity_acc_st_dev_x_axis"	"Standard deviation of the time domain signals of the body's gravity, recorded by the x-axis of the phone's gyroscope"
-"40"	"time_signal_gravity_acc_st_dev_y_axis"	"Standard deviation of the time domain signals of the body's gravity, recorded by the y-axis of the phone's gyroscope"
-"41"	"time_signal_gravity_acc_st_dev_z_axis"	"Standard deviation of the time domain signals of the body's gravity, recorded by the z-axis of the phone's gyroscope"
-"42"	"time_signal_body_acc_jerk_st_dev_x_axis"	"Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer"
-"43"	"time_signal_body_acc_jerk_st_dev_y_axis"	"Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer"
-"44"	"time_signal_body_acc_jerk_st_dev_z_axis"	"Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer"
-"45"	"time_signal_body_gyro_st_dev_x_axis"	"Standard deviation of the time domain signals of the body, recorded by the x-axis of the phone's gyroscope"
-"46"	"time_signal_body_gyro_st_dev_y_axis"	"Standard deviation of the time domain signals of the body, recorded by the y-axis of the phone's gyroscope"
-"47"	"time_signal_body_gyro_st_dev_z_axis"	"Standard deviation of the time domain signals of the body, recorded by the z-axis of the phone's gyroscope"
-"48"	"time_signal_body_gyro_jerk_st_dev_x_axis"	"Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's gyroscope"
-"49"	"time_signal_body_gyro_jerk_st_dev_y_axis"	"Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's gyroscope"
-"50"	"time_signal_body_gyro_jerk_st_dev_z_axis"	"Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's gyroscope"
-"51"	"time_signal_body_acc_mag_st_dev"	"Standard deviation of the magnitude of the time domain signals of the body, recorded by the phone's accelerometer"
-"52"	"time_signal_gravity_acc_mag_st_dev"	"Standard deviation of the magnitude of the time domain signals of the body's gravity, recorded by the phone's gyroscope"
-"53"	"time_signal_body_acc_jerk_mag_st_dev"	"Standard deviation of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer"
-"54"	"time_signal_body_gyro_mag_st_dev"	"Standard deviation of the magnitude of the time domain signals of the body, recorded by the phone's gyroscope"
-"55"	"time_signal_body_gyro_jerk_mag_st_dev"	"Standard deviation of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope"
-"56"	"frequency_signal_body_acc_st_dev_x_axis"	"Standard deviation of the frequency domain signals, of the body, recorded by the x-axis of the phone's accelerometer"
-"57"	"frequency_signal_body_acc_st_dev_y_axis"	"Standard deviation of the frequency domain signals, of the body, recorded by the y-axis of the phone's accelerometer"
-"58"	"frequency_signal_body_acc_st_dev_z_axis"	"Standard deviation of the frequency domain signals, of the body, recorded by the z-axis of the phone's accelerometer"
-"59"	"frequency_signal_body_acc_jerk_st_dev_x_axis"	"Standard deviation of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer"
-"60"	"frequency_signal_body_acc_jerk_st_dev_y_axis"	"Standard deviation of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer"
-"61"	"frequency_signal_body_acc_jerk_st_dev_z_axis"	"Standard deviation of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer"
-"62"	"frequency_signal_body_gyro_st_dev_x_axis"	"Standard deviation of the frequency domain signals, of the body, recorded by the x-axis of the phone's gyroscope"
-"63"	"frequency_signal_body_gyro_st_dev_y_axis"	"Standard deviation of the frequency domain signals, of the body, recorded by the y-axis of the phone's gyroscope"
-"64"	"frequency_signal_body_gyro_st_dev_z_axis"	"Standard deviation of the frequency domain signals, of the body, recorded by the z-axis of the phone's gyroscope"
-"65"	"frequency_signal_body_acc_mag_st_dev"	"Standard deviation of the magnitude of the frequency domain signals of the body, recorded by the phone's accelerometer"
-"66"	"frequency_signal_body_body_acc_jerk_mag_st_dev"	"Standard deviation of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer"
-"67"	"frequency_signal_body_body_gyro_mag_st_dev"	"Standard deviation of the magnitude of the frequency domain signals of the body, recorded by the phone's gyroscope"
-"68"	"frequency_signal_body_body_gyro_jerk_mag_st_dev"	"Standard deviation of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope"
+#feature	  description
+#----------------------------------
+#activity	                        Activity type: Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing,                                  Laying
+subject	                          Subject number (1-30)
+time_signal_body_acc_mean_x_axis	Average time domain signals of the body, recorded by the x-axis of the phone's accelerometer
+time_signal_body_acc_mean_y_axis	Average time domain signals of the body, recorded by the y-axis of the phone's accelerometer
+time_signal_body_acc_mean_z_axis	Average time domain signals of the body, recorded by the z-axis of the phone's accelerometer
+time_signal_gravity_acc_mean_x_axis	Average time domain signals of the body's gravity, recorded by the x-axis of the phone's gyroscope
+time_signal_gravity_acc_mean_y_axis	Average time domain signals of the body's gravity, recorded by the y-axis of the phone's gyroscope
+time_signal_gravity_acc_mean_z_axis	Average time domain signals of the body's gravity, recorded by the z-axis of the phone's gyroscope
+time_signal_body_acc_jerk_mean_x_axis	Average jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer
+time_signal_body_acc_jerk_mean_y_axis	Average jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer
+time_signal_body_acc_jerk_mean_z_axis	Average jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer
+time_signal_body_gyro_mean_x_axis	Average time domain signals of the body, recorded by the x-axis of the phone's gyroscope
+time_signal_body_gyro_mean_y_axis	Average time domain signals of the body, recorded by the y-axis of the phone's gyroscope
+time_signal_body_gyro_mean_z_axis	Average time domain signals of the body, recorded by the z-axis of the phone's gyroscope
+time_signal_body_gyro_jerk_mean_x_axis	Average jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's gyroscope
+time_signal_body_gyro_jerk_mean_y_axis	Average jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's gyroscope
+time_signal_body_gyro_jerk_mean_z_axis	Average jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's gyroscope
+time_signal_body_acc_mag_mean	Average value of the magnitude of the time domain signals of the body, recorded by the phone's accelerometer
+time_signal_gravity_acc_mag_mean	Average value of the magnitude of the time domain signals of the body's gravity, recorded by the phone's gyroscope
+time_signal_body_acc_jerk_mag_mean	Average value of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer
+time_signal_body_gyro_mag_mean	Average value of the magnitude of the time domain signals of the body, recorded by the phone's gyroscope
+time_signal_body_gyro_jerk_mag_mean	Average value of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope
+frequency_signal_body_acc_mean_x_axis	Average value of the frequency domain signals, of the body, recorded by the x-axis of the phone's accelerometer
+frequency_signal_body_acc_mean_y_axis	Average value of the frequency domain signals, of the body, recorded by the y-axis of the phone's accelerometer
+frequency_signal_body_acc_mean_z_axis	Average value of the frequency domain signals, of the body, recorded by the z-axis of the phone's accelerometer
+frequency_signal_body_acc_jerk_mean_x_axis	Average value of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer
+frequency_signal_body_acc_jerk_mean_y_axis	Average value of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer
+frequency_signal_body_acc_jerk_mean_z_axis	Average value of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer
+frequency_signal_body_gyro_mean_x_axis	Average value of the frequency domain signals, of the body, recorded by the x-axis of the phone's gyroscope
+frequency_signal_body_gyro_mean_y_axis	Average value of the frequency domain signals, of the body, recorded by the y-axis of the phone's gyroscope
+frequency_signal_body_gyro_mean_z_axis	Average value of the frequency domain signals, of the body, recorded by the z-axis of the phone's gyroscope
+frequency_signal_body_acc_mag_mean	Average value of the magnitude of the frequency domain signals of the body, recorded by the phone's accelerometer
+frequency_signal_body_body_acc_jerk_mag_mean	Average value of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer
+frequency_signal_body_body_gyro_mag_mean	Average value of the magnitude of the frequency domain signals of the body, recorded by the phone's gyroscope
+frequency_signal_body_body_gyro_jerk_mag_mean	Average value of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope
+time_signal_body_acc_st_dev_x_axis	Standard deviation of the time domain signals of the body, recorded by the x-axis of the phone's accelerometer
+time_signal_body_acc_st_dev_y_axis	Standard deviation of the time domain signals of the body, recorded by the y-axis of the phone's accelerometer
+time_signal_body_acc_st_dev_z_axis	Standard deviation of the time domain signals of the body, recorded by the z-axis of the phone's accelerometer
+time_signal_gravity_acc_st_dev_x_axis	Standard deviation of the time domain signals of the body's gravity, recorded by the x-axis of the phone's gyroscope
+time_signal_gravity_acc_st_dev_y_axis	Standard deviation of the time domain signals of the body's gravity, recorded by the y-axis of the phone's gyroscope
+time_signal_gravity_acc_st_dev_z_axis	Standard deviation of the time domain signals of the body's gravity, recorded by the z-axis of the phone's gyroscope
+time_signal_body_acc_jerk_st_dev_x_axis	Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer
+time_signal_body_acc_jerk_st_dev_y_axis	Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer
+time_signal_body_acc_jerk_st_dev_z_axis	Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer
+time_signal_body_gyro_st_dev_x_axis	Standard deviation of the time domain signals of the body, recorded by the x-axis of the phone's gyroscope
+time_signal_body_gyro_st_dev_y_axis	Standard deviation of the time domain signals of the body, recorded by the y-axis of the phone's gyroscope
+time_signal_body_gyro_st_dev_z_axis	Standard deviation of the time domain signals of the body, recorded by the z-axis of the phone's gyroscope
+time_signal_body_gyro_jerk_st_dev_x_axis	Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's gyroscope
+time_signal_body_gyro_jerk_st_dev_y_axis	Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's gyroscope
+time_signal_body_gyro_jerk_st_dev_z_axis	Standard deviation of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's gyroscope
+time_signal_body_acc_mag_st_dev	Standard deviation of the magnitude of the time domain signals of the body, recorded by the phone's accelerometer
+time_signal_gravity_acc_mag_st_dev	Standard deviation of the magnitude of the time domain signals of the body's gravity, recorded by the phone's gyroscope
+time_signal_body_acc_jerk_mag_st_dev	Standard deviation of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer
+time_signal_body_gyro_mag_st_dev	Standard deviation of the magnitude of the time domain signals of the body, recorded by the phone's gyroscope
+time_signal_body_gyro_jerk_mag_st_dev	Standard deviation of the magnitude of the jerk, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope
+frequency_signal_body_acc_st_dev_x_axis	Standard deviation of the frequency domain signals, of the body, recorded by the x-axis of the phone's accelerometer
+frequency_signal_body_acc_st_dev_y_axis	Standard deviation of the frequency domain signals, of the body, recorded by the y-axis of the phone's accelerometer
+frequency_signal_body_acc_st_dev_z_axis	Standard deviation of the frequency domain signals, of the body, recorded by the z-axis of the phone's accelerometer
+frequency_signal_body_acc_jerk_st_dev_x_axis	Standard deviation of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the x-axis of the phone's accelerometer
+frequency_signal_body_acc_jerk_st_dev_y_axis	Standard deviation of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the y-axis of the phone's accelerometer
+frequency_signal_body_acc_jerk_st_dev_z_axis	Standard deviation of the frequency domain signals, of the jerk, derived from body linear acceleration and angular velocity, recorded by the z-axis of the phone's accelerometer
+frequency_signal_body_gyro_st_dev_x_axis	Standard deviation of the frequency domain signals, of the body, recorded by the x-axis of the phone's gyroscope
+frequency_signal_body_gyro_st_dev_y_axis	Standard deviation of the frequency domain signals, of the body, recorded by the y-axis of the phone's gyroscope
+frequency_signal_body_gyro_st_dev_z_axis	Standard deviation of the frequency domain signals, of the body, recorded by the z-axis of the phone's gyroscope
+frequency_signal_body_acc_mag_st_dev	Standard deviation of the magnitude of the frequency domain signals of the body, recorded by the phone's accelerometer
+frequency_signal_body_body_acc_jerk_mag_st_dev	Standard deviation of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's accelerometer
+frequency_signal_body_body_gyro_mag_st_dev	Standard deviation of the magnitude of the frequency domain signals of the body, recorded by the phone's gyroscope
+frequency_signal_body_body_gyro_jerk_mag_st_dev	Standard deviation of the magnitude of the jerk of the frequency domain signals, derived from body linear acceleration and angular velocity, recorded by the phone's gyroscope
