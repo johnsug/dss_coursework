@@ -12,10 +12,10 @@ file # | file name | description
 This code should be run in the folder containing the Samsung data, available here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 The code is broken-down into five main steps:
-1. Merges testing and training data (including activity names, subject numbers, and the raw measurements) into one large data set
-2. Extracts only the features relating to means and standard deviations
-3. Describes the features (later exported into the codebook)
-4. Re-labels the feature names with more intuitive variable names; note--because the file names were somewhat long, I used lowercase labels, seperated with underscores.  I felt this was more readable than just lowercase w/ no spaces, and I prefer this to other naming conventions (such as FirstUpper, camelCase, etc).
-5. Creates a "tidy" data set with the average of each feature, grouped by activity and subject ID
+* 1. Merges testing and training data (including activity names, subject numbers, and the raw measurements) into one large data set
+* 2. Extracts only the features relating to means and standard deviations
+* 3. Describes the features (later exported into the codebook)
+* 4. Re-labels the feature names with more intuitive variable names; note--because the file names were somewhat long, I used lowercase labels, seperated with underscores.  I felt this was more readable than just lowercase w/ no spaces, and I prefer this to other naming conventions (such as FirstUpper, camelCase, etc).
+* 5. Creates a "tidy" data set with the average of each feature, grouped by activity and subject ID
 
-Lastly, the code also exports the codebook (with the feature names from step #4 and the descriptions from step #3, above).  Further inspection of the code will reveal more granular documentation.
+Lastly, the code also exports the codebook (with the feature names from step #4 and the descriptions from step #3, above). Further inspection of the code will reveal more granular documentation.
