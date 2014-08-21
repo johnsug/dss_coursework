@@ -241,4 +241,4 @@ write.table(tidy, "tidy.txt", row.names=FALSE)
 
 ## prints codebook
 codebook <- data.frame(feature=names(data), description=descriptions)
-write.table(codebook, "codebook.txt", sep="\t")
+write.table(codebook, "codebook.txt", sep="|")
