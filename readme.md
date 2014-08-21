@@ -1,6 +1,6 @@
 ## this folder contains deliverables for course project for the "Getting and Cleaning Data" course of the JHU/Coursera Data Science specialization.
 
-# specific files:
+### specific files:
 1. codebook.md -- a list of the features used in the tidy dataset
 2. readme.md -- this document
 3. run_analysis.R -- the R code that aggregates and labels the data, and produces the tidy dataset
