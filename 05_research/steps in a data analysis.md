@@ -1,5 +1,5 @@
-###Steps in a data analysis Steps in a data analysis
-####(from week 1's lectures)
+##Steps in a data analysis
+#####*(from week 1's lectures)*
 
 Define the question
 * Start with a general question (eg, *"Can I automatically detect emails that are SPAM that are not?"*)
