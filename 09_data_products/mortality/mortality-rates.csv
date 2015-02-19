@@ -1,0 +1,289 @@
+Age,Mortality,Gender,Industry
+18,0.000328,Male,All
+19,0.000369,Male,All
+20,0.000406,Male,All
+21,0.000449,Male,All
+22,0.000488,Male,All
+23,0.000509,Male,All
+24,0.000516,Male,All
+25,0.000484,Male,All
+26,0.000462,Male,All
+27,0.000449,Male,All
+28,0.000444,Male,All
+29,0.000446,Male,All
+30,0.000452,Male,All
+31,0.000463,Male,All
+32,0.000477,Male,All
+33,0.000492,Male,All
+34,0.000508,Male,All
+35,0.000523,Male,All
+36,0.000536,Male,All
+37,0.000551,Male,All
+38,0.00057,Male,All
+39,0.000595,Male,All
+40,0.000628,Male,All
+41,0.000671,Male,All
+42,0.000725,Male,All
+43,0.000793,Male,All
+44,0.000876,Male,All
+45,0.000973,Male,All
+46,0.001087,Male,All
+47,0.001215,Male,All
+48,0.001358,Male,All
+49,0.001515,Male,All
+50,0.001686,Male,All
+51,0.001871,Male,All
+52,0.002072,Male,All
+53,0.002289,Male,All
+54,0.002527,Male,All
+55,0.002788,Male,All
+56,0.003079,Male,All
+57,0.003407,Male,All
+58,0.003779,Male,All
+59,0.004204,Male,All
+60,0.004688,Male,All
+61,0.00524,Male,All
+62,0.005867,Male,All
+63,0.006577,Male,All
+64,0.007377,Male,All
+65,0.008277,Male,All
+18,0.000424,Male,Blue Collar
+19,0.000478,Male,Blue Collar
+20,0.000525,Male,Blue Collar
+21,0.000581,Male,Blue Collar
+22,0.000632,Male,Blue Collar
+23,0.000659,Male,Blue Collar
+24,0.000668,Male,Blue Collar
+25,0.000626,Male,Blue Collar
+26,0.000598,Male,Blue Collar
+27,0.000581,Male,Blue Collar
+28,0.000575,Male,Blue Collar
+29,0.000577,Male,Blue Collar
+30,0.000585,Male,Blue Collar
+31,0.000599,Male,Blue Collar
+32,0.000617,Male,Blue Collar
+33,0.000637,Male,Blue Collar
+34,0.000657,Male,Blue Collar
+35,0.000677,Male,Blue Collar
+36,0.000694,Male,Blue Collar
+37,0.000713,Male,Blue Collar
+38,0.000738,Male,Blue Collar
+39,0.00077,Male,Blue Collar
+40,0.000813,Male,Blue Collar
+41,0.000868,Male,Blue Collar
+42,0.000938,Male,Blue Collar
+43,0.001026,Male,Blue Collar
+44,0.001134,Male,Blue Collar
+45,0.001259,Male,Blue Collar
+46,0.001407,Male,Blue Collar
+47,0.001572,Male,Blue Collar
+48,0.001757,Male,Blue Collar
+49,0.001961,Male,Blue Collar
+50,0.002182,Male,Blue Collar
+51,0.002421,Male,Blue Collar
+52,0.002681,Male,Blue Collar
+53,0.002962,Male,Blue Collar
+54,0.00327,Male,Blue Collar
+55,0.003608,Male,Blue Collar
+56,0.003984,Male,Blue Collar
+57,0.004409,Male,Blue Collar
+58,0.00489,Male,Blue Collar
+59,0.00544,Male,Blue Collar
+60,0.006067,Male,Blue Collar
+61,0.006781,Male,Blue Collar
+62,0.007592,Male,Blue Collar
+63,0.008511,Male,Blue Collar
+64,0.009546,Male,Blue Collar
+65,0.010711,Male,Blue Collar
+18,0.00023,Male,White Collar
+19,0.000259,Male,White Collar
+20,0.000285,Male,White Collar
+21,0.000315,Male,White Collar
+22,0.000342,Male,White Collar
+23,0.000357,Male,White Collar
+24,0.000362,Male,White Collar
+25,0.000339,Male,White Collar
+26,0.000324,Male,White Collar
+27,0.000315,Male,White Collar
+28,0.000311,Male,White Collar
+29,0.000313,Male,White Collar
+30,0.000317,Male,White Collar
+31,0.000325,Male,White Collar
+32,0.000335,Male,White Collar
+33,0.000345,Male,White Collar
+34,0.000356,Male,White Collar
+35,0.000367,Male,White Collar
+36,0.000376,Male,White Collar
+37,0.000386,Male,White Collar
+38,0.0004,Male,White Collar
+39,0.000417,Male,White Collar
+40,0.00044,Male,White Collar
+41,0.000471,Male,White Collar
+42,0.000508,Male,White Collar
+43,0.000556,Male,White Collar
+44,0.000614,Male,White Collar
+45,0.000682,Male,White Collar
+46,0.000762,Male,White Collar
+47,0.000852,Male,White Collar
+48,0.000952,Male,White Collar
+49,0.001062,Male,White Collar
+50,0.001182,Male,White Collar
+51,0.001312,Male,White Collar
+52,0.001453,Male,White Collar
+53,0.001605,Male,White Collar
+54,0.001772,Male,White Collar
+55,0.001955,Male,White Collar
+56,0.002159,Male,White Collar
+57,0.002389,Male,White Collar
+58,0.00265,Male,White Collar
+59,0.002948,Male,White Collar
+60,0.003288,Male,White Collar
+61,0.003675,Male,White Collar
+62,0.004114,Male,White Collar
+63,0.004612,Male,White Collar
+64,0.005173,Male,White Collar
+65,0.005805,Male,White Collar
+18,0.000157,Female,All
+19,0.000162,Female,All
+20,0.000162,Female,All
+21,0.000162,Female,All
+22,0.000162,Female,All
+23,0.000166,Female,All
+24,0.000169,Female,All
+25,0.000173,Female,All
+26,0.000179,Female,All
+27,0.000187,Female,All
+28,0.000196,Female,All
+29,0.000206,Female,All
+30,0.000218,Female,All
+31,0.000231,Female,All
+32,0.000244,Female,All
+33,0.000258,Female,All
+34,0.000272,Female,All
+35,0.000286,Female,All
+36,0.0003,Female,All
+37,0.000318,Female,All
+38,0.000339,Female,All
+39,0.000365,Female,All
+40,0.000396,Female,All
+41,0.000433,Female,All
+42,0.000477,Female,All
+43,0.000529,Female,All
+44,0.000589,Female,All
+45,0.000657,Female,All
+46,0.000733,Female,All
+47,0.000816,Female,All
+48,0.000906,Female,All
+49,0.001001,Female,All
+50,0.001102,Female,All
+51,0.001206,Female,All
+52,0.001315,Female,All
+53,0.001429,Female,All
+54,0.001548,Female,All
+55,0.001673,Female,All
+56,0.001805,Female,All
+57,0.001946,Female,All
+58,0.002097,Female,All
+59,0.002261,Female,All
+60,0.002442,Female,All
+61,0.002642,Female,All
+62,0.002864,Female,All
+63,0.003113,Female,All
+64,0.003389,Female,All
+65,0.003696,Female,All
+18,0.000176,Female,Blue Collar
+19,0.000182,Female,Blue Collar
+20,0.000182,Female,Blue Collar
+21,0.000182,Female,Blue Collar
+22,0.000182,Female,Blue Collar
+23,0.000186,Female,Blue Collar
+24,0.00019,Female,Blue Collar
+25,0.000194,Female,Blue Collar
+26,0.000201,Female,Blue Collar
+27,0.00021,Female,Blue Collar
+28,0.00022,Female,Blue Collar
+29,0.000231,Female,Blue Collar
+30,0.000244,Female,Blue Collar
+31,0.000259,Female,Blue Collar
+32,0.000274,Female,Blue Collar
+33,0.000289,Female,Blue Collar
+34,0.000305,Female,Blue Collar
+35,0.000321,Female,Blue Collar
+36,0.000336,Female,Blue Collar
+37,0.000357,Female,Blue Collar
+38,0.00038,Female,Blue Collar
+39,0.000409,Female,Blue Collar
+40,0.000444,Female,Blue Collar
+41,0.000486,Female,Blue Collar
+42,0.000535,Female,Blue Collar
+43,0.000593,Female,Blue Collar
+44,0.000661,Female,Blue Collar
+45,0.000737,Female,Blue Collar
+46,0.000822,Female,Blue Collar
+47,0.000915,Female,Blue Collar
+48,0.001016,Female,Blue Collar
+49,0.001123,Female,Blue Collar
+50,0.001236,Female,Blue Collar
+51,0.001353,Female,Blue Collar
+52,0.001475,Female,Blue Collar
+53,0.001603,Female,Blue Collar
+54,0.001736,Female,Blue Collar
+55,0.001876,Female,Blue Collar
+56,0.002024,Female,Blue Collar
+57,0.002182,Female,Blue Collar
+58,0.002352,Female,Blue Collar
+59,0.002536,Female,Blue Collar
+60,0.002739,Female,Blue Collar
+61,0.002963,Female,Blue Collar
+62,0.003212,Female,Blue Collar
+63,0.003491,Female,Blue Collar
+64,0.003801,Female,Blue Collar
+65,0.004145,Female,Blue Collar
+18,0.000132,Female,White Collar
+19,0.000137,Female,White Collar
+20,0.000137,Female,White Collar
+21,0.000137,Female,White Collar
+22,0.000137,Female,White Collar
+23,0.00014,Female,White Collar
+24,0.000143,Female,White Collar
+25,0.000146,Female,White Collar
+26,0.000151,Female,White Collar
+27,0.000158,Female,White Collar
+28,0.000165,Female,White Collar
+29,0.000174,Female,White Collar
+30,0.000184,Female,White Collar
+31,0.000195,Female,White Collar
+32,0.000206,Female,White Collar
+33,0.000218,Female,White Collar
+34,0.00023,Female,White Collar
+35,0.000241,Female,White Collar
+36,0.000253,Female,White Collar
+37,0.000268,Female,White Collar
+38,0.000286,Female,White Collar
+39,0.000308,Female,White Collar
+40,0.000334,Female,White Collar
+41,0.000365,Female,White Collar
+42,0.000402,Female,White Collar
+43,0.000446,Female,White Collar
+44,0.000497,Female,White Collar
+45,0.000554,Female,White Collar
+46,0.000618,Female,White Collar
+47,0.000689,Female,White Collar
+48,0.000764,Female,White Collar
+49,0.000845,Female,White Collar
+50,0.00093,Female,White Collar
+51,0.001018,Female,White Collar
+52,0.00111,Female,White Collar
+53,0.001206,Female,White Collar
+54,0.001306,Female,White Collar
+55,0.001412,Female,White Collar
+56,0.001523,Female,White Collar
+57,0.001642,Female,White Collar
+58,0.001769,Female,White Collar
+59,0.001908,Female,White Collar
+60,0.00206,Female,White Collar
+61,0.002229,Female,White Collar
+62,0.002417,Female,White Collar
+63,0.002627,Female,White Collar
+64,0.002859,Female,White Collar
+65,0.003119,Female,White Collar
