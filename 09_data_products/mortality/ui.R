@@ -17,7 +17,7 @@ shinyUI(
     fluidRow(
         column(3,selectInput('Industry', 'Industry:', c('All', 'White Collar', 'Blue Collar'))),
         column(3,selectInput('Gender', 'Gender:', c('Male', 'Female'))),
-        column(3,selectInput('Age', 'Age:', c(18:80)))
+        column(3,selectInput('Age', 'Age:', c(18:65)))
       ),
     
     # predicted mortality rate
