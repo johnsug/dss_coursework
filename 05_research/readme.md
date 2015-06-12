@@ -3,28 +3,19 @@
 
 <br>
 
-##Steps in a data analysis (notes from lectures)
+##Steps in a data analysis 
+<i>(notes from lectures)</i>
 
 1. Define the question
-
 2. Define the ideal data set
-
 3. Determine what data you can access
-
 4. Obtain the data
-
 5. Clean the data
-
 6. Exploratory data analysis
-
 7. Statistical prediction/modeling
-
 8. Interpret results
-
 9. Challenge results
-
 10. Synthesize/write up results
-
 11. Create reproducible code
 
 Define the question
