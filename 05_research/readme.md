@@ -1,8 +1,7 @@
-**Assignment 01:** steps-per-day analysis (Rmarkdown file)
+- **Assignment 01:** steps-per-day analysis (Rmarkdown file)
+- **Assignment 02:** US storm data analysis (Rmarkdown slide deck, see: http://rpubs.com/johnsug/stormtracker)
 
-**Assignment 02:** US storm data analysis (Rmarkdown slide deck, see: http://rpubs.com/johnsug/stormtracker)
-
-<br><br>
+<br>
 
 ##Steps in a data analysis
 
