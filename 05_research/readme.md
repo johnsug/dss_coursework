@@ -1,10 +1,9 @@
 - **Assignment 01:** steps-per-day analysis (Rmarkdown file)
 - **Assignment 02:** US storm data analysis (Rmarkdown slide deck, see: http://rpubs.com/johnsug/stormtracker)
 
-<br>
+-------------------------------------
 
-##Steps in a data analysis 
-<i>(notes from lectures)</i>
+## Lecture notes: steps in a data analysis 
 
 1. Define the question
 2. Define the ideal data set
