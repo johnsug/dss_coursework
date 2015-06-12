@@ -1,0 +1,149 @@
+---
+title: "Storm Tracker Analysis"
+author: "github.com/johnsug"
+date: "March 21, 2015"
+output: ioslides_presentation
+---
+
+## Synopsis
+
+This presentation is the result of my findings after exploring the [NOAA Storm Database](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2).
+
+This presentation will answer:
+
+- Which U.S. events are <font color="red">**most harmful**</font> with respect to population health?
+- Which U.S. of events have the <font color="limegreen">**greatest economic**</font> consequences?
+
+My analysis (and this presentation) was created using the [R](http://cran.r-project.org/) software suite in conjunction with [R Studio](http://www.rstudio.com/). 
+
+## Data Processing
+
+Loading data:
+
+```{r dataProcessing, cache=TRUE}
+## load data
+d <- read.csv(bzfile("repdata-data-StormData.csv.bz2"))
+```
+
+## Data Processing, Cont'd
+
+Query data to determine which events are <font color="red">**most harmful**</font> *(defined as fatalities plus injuries)*:
+
+```{r processHarm, message=FALSE}
+## query data
+library(sqldf)
+harm <- sqldf("select evtype, 
+                sum(fatalities) as fatalities, 
+                sum(injuries) as injuries 
+              from d 
+              group by evtype")
+
+## harmful = fatalities + injuries
+harm$total <- harm$fatalities + harm$injuries
+harm <- sqldf("select * from harm 
+              order by total desc 
+              limit 10")
+```
+
+## Data Processing, Cont'd Again
+
+Data munging (cleaning data):
+
+```{r processEcon01}
+## drop weird PROPDMGEXP values
+`%notin%` <- function(x,y) !(x %in% y)  ## useful function
+d <- d[d$PROPDMGEXP %notin% c('-','?','+',0:8,'h','H'),]
+d$PROPDMGEXP[d$PROPDMGEXP=='m'] <- 'M'
+d$PROPDMGEXP <- droplevels(d$PROPDMGEXP)
+
+## drop weird CROPDMGEXP values
+d <- d[d$CROPDMGEXP %notin% c('?',0,2),]
+d$CROPDMGEXP[d$CROPDMGEXP=='k'] <- 'K'
+d$CROPDMGEXP[d$CROPDMGEXP=='m'] <- 'M'
+d$CROPDMGEXP <- droplevels(d$CROPDMGEXP)
+```
+
+## Data Processing, Cont'd Yet Again
+
+More data munging (setting all figures to the same scale):
+
+```{r processEcon02}
+## re-scale property damage
+d$property_cost[d$PROPDMGEXP=='K'] <- 
+  d$PROPDMG[d$PROPDMGEXP=='K'] * 1000
+d$property_cost[d$PROPDMGEXP=='M'] <- 
+  d$PROPDMG[d$PROPDMGEXP=='M'] * 1000000
+d$property_cost[d$PROPDMGEXP=='B'] <- 
+  d$PROPDMG[d$PROPDMGEXP=='B']*1000000000
+
+## re-scale crop damage
+d$crop_cost[d$CROPDMGEXP=='K'] <- 
+  d$CROPDMG[d$CROPDMGEXP=='K'] * 1000
+d$crop_cost[d$CROPDMGEXP=='M'] <- 
+  d$CROPDMG[d$CROPDMGEXP=='M'] * 1000000
+d$crop_cost[d$CROPDMGEXP=='B'] <- 
+  d$CROPDMG[d$CROPDMGEXP=='B'] * 1000000000
+```
+
+## Data Processing, Almost Done
+
+Query data to determine which events have the <font color="limegreen">**greatest economic impact**</font> *(in terms of property plus crop damage)*:
+
+```{r processEcon03, message=FALSE}
+## economic cost = property cost + crop cost
+d$property_cost[is.na(d$property_cost)] <- 0
+d$crop_cost[is.na(d$crop_cost)] <- 0
+d$economic_cost <- d$property_cost + d$crop_cost
+
+## query and scale data (in billions)
+library(sqldf)
+econ <- sqldf("select evtype, 
+                sum(economic_cost) / 1000000000 as cost 
+              from d 
+              group by evtype
+              order by cost desc
+              limit 10")
+```
+
+## Data Processing, One Last Slide
+
+Generate top ten harmful and costly event histograms:
+
+```{r histograms}
+## generate most harmful events histogram ('h_hist')
+library(ggplot2)
+harm$EVTYPE <- factor(harm$EVTYPE, 
+                      levels=rev(c(as.character(harm$EVTYPE))))
+h_hist <- ggplot(harm, aes(x=EVTYPE, y=total)) + coord_flip() + 
+            geom_histogram(stat="identity", fill="red", alpha=.5) + 
+            labs(x="Event Type", y="Affected Lives", title="Top 10 Most Harmful Storms")
+
+## generate most costly events histogram ('e_hist')
+econ$EVTYPE <- factor(econ$EVTYPE, 
+                      levels=rev(c(as.character(econ$EVTYPE))))
+e_hist <- ggplot(econ, aes(x=EVTYPE, y=cost)) + coord_flip() + 
+            geom_histogram(stat="identity", fill="green", alpha=.35) + 
+            labs(x="Event Type", y="Cost (in Billions)", title="Top 10 Most Costly Storms")
+
+
+```
+
+## Results: <font color="red">Most Harmful</font> Events
+
+```{r harmPlot}
+h_hist
+```
+
+
+## Results: <font color="limegreen">Greatest Economic</font> Events
+```{r econPlot}
+e_hist
+```
+
+## Take Aways:
+
+- <font color="limegreen"><b>Floods</b></font> are the <font color="limegreen">most expensive</font> U.S. storm
+- <font color="red"><b>Tornados</b></font> are the <font color="red">most harmful</font> U.S. storm
+- If you see flooding, tornados, **AND** sharks, just go home
+
+<center><a href=http://www.syfy.com/sharknado3><img src=http://pixel.nymag.com/imgs/daily/vulture/2014/07/31/sharknado/weather%20lady.o.jpg/a_560x0.jpg></a></center>
