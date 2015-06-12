@@ -3,7 +3,7 @@
 
 <br>
 
-##Steps in a data analysis
+##Steps in a data analysis (notes from lectures)
 
 1. Define the question
 
