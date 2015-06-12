@@ -1,5 +1,5 @@
 - **Assignment 01:** steps-per-day analysis (Rmarkdown file)
-- **Assignment 02:** US storm data analysis (Rmarkdown slide deck, see: http://rpubs.com/johnsug/stormtracker)
+- **Assignment 02:** analysis of [NOAA storm database](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2) (Rmarkdown slide deck, see: http://rpubs.com/johnsug/stormtracker)
 
 -------------------------------------
 
