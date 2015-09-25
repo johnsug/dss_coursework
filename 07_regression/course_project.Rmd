@@ -1,0 +1,71 @@
+---
+title: "Regression Models Course Project"
+date: "September 26, 2015"
+output: pdf_document
+---
+
+## Executive Summary
+
+Using data from the 1974 *Motor Trend* US cars report, 32 automobiles (1973-1974 models) were analyzed in an attempt to quantify the following two research questions:
+
+1. Are automatic or manual transmissions are better for automobile mileage (MPG)?
+2. What is the MPG difference between automobiles with automatic and manual transmissions?
+
+Using stepwise least-squares regression to minimize the Akaike information criterion (AIC), transmission type was **not** found to be a statistically significant determinant in miles per gallon (MPG) prediction.  However this could be due in part to the small sample size used in the study (n=32).  That being said, the study indicates a **1.0 +/- 2.9 MPG difference** between manual and automatic transmissions.  The 95% confience interval for this differential is (-1.9, 3.9), and the estimator has a p-value of 0.4825, suggesting that the estimate is not statistically significant.
+
+
+## Grading criteria:
+
+* Did the student interpret the coefficients correctly?
+* Did the student do some exploratory data analyses?
+* Did the student fit multiple models and detail their strategy for model selection?
+* Did the student answer the questions of interest or detail why the question(s) is (are) not answerable?
+* Did the student do a residual plot and some diagnostics?
+* Did the student quantify the uncertainty in their conclusions and/or perform an inference correctly?
+* Was the report brief (about 2 pages long) for the main body of the report and no longer than 5 with supporting appendix of figures?
+* Was the report done in Rmd (knitr)?
+
+
+## 1. Introduction
+
+Most automobiles run on gasoline (the exception being electric cars, biofuel-powered cars, and [DeLorian time machines](https://www.youtube.com/watch?v=3HYoq6vIVXc)).  People often look to the Miles Per Gallon (MPG) measurement to understand how efficenet their automobiles are at propelling themselves based on the car's fuel consumption.
+
+It has been long rumored that automobiles with manual transmissions have higher MPGs than those with automatic transmissions.  We at *Motor Trent* wanted to investage this claim, and turned to our team of statisticians for answers.  Specifically, we wanted to investigate the following two research questions:
+
+1. Are automatic or manual transmissions are better for automobile mileage (MPG)?
+2. What is the MPG difference between automobiles with automatic and manual transmissions?
+
+Using data from the 1974 *Motor Trend* US cars report (see the [mtcars](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html) database in the R [datasets](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html) package), 32 automobiles from 1973 and 1974 were analyzed in an attempt to quantify our research questions.
+
+
+
+## 2. Methods
+
+According to the stepwise function, the best-fit regression equation for predicting miles per hour is
+
+MPG = f(Weight + qsec + Automatic/Manual)
+
+
+
+## 3. Results
+
+
+
+
+
+
+```{r cars, eval=FALSE}
+fit <- lm(mpg ~ ., data=mtcars)
+step <- stepAIC(fit, direction="both")
+step$anova
+```
+
+\pagebreak
+
+## Appendix
+
+A brief note on this file's formatting -- this file was developed using the knitr package in R; you can view the R Markdown file here: https://github.com/johnsug/dss/tree/master/07_regression/course_project.Rmd
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
