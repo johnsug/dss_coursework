@@ -70,10 +70,10 @@ plot(ts(d$Voltage, freq=1440, start=5), xlab="datetime", ylab="Voltage", xaxt="n
 axis(1, at=c(5,6,7), labels=c("Thu", "Fri", "Sat"))
 
 # plot #3
-plot(ts(d$Sub_metering_1, freq=1440, start=5), ylab="Energy sub metering", xaxt="n")
+plot(ts(d$Sub_metering_1, freq=1440, start=5), xlab="", ylab="Energy sub metering", xaxt="n")
 lines(ts(d$Sub_metering_2, freq=1440, start=5), col="red")
 lines(ts(d$Sub_metering_3, freq=1440, start=5), col="blue")
-legend("topright", pch="_", col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
+legend("topright", pch="_", col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n", cex=.8)
 axis(1, at=c(5,6,7), labels=c("Thu", "Fri", "Sat"))
 
 # plot #4
