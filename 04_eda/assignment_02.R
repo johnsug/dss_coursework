@@ -1,6 +1,5 @@
 
 # load data (original source: https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip)
-setwd("C:/Users/JS033085/Desktop/dss/04_eda")
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 names(SCC) <- gsub("\\.", "_", names(SCC))  ## minor reformatting (due to 'sqldf' not liking periods)
