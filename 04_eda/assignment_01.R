@@ -36,18 +36,18 @@ d$Global_intensity %<>% as.numeric()
 d$Sub_metering_1 %<>% as.numeric()
 d$Sub_metering_2 %<>% as.numeric()
 
-## Plot #1: ##################
+## Plot #1: ###########################################################################################################
 hist(x=d$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 dev.copy(png, file="plot1.png")
 dev.off()
 
-## Plot #2: ##################
+## Plot #2: ###########################################################################################################
 plot(ts(d$Global_active_power, freq=1440, start=5), xlab="", ylab="Global Active Power (kilowatts)", xaxt="n")
 axis(1, at=c(5,6,7), labels=c("Thu", "Fri", "Sat"))
 dev.copy(png, file="plot2.png")
 dev.off()
 
-## Plot #3: ##################
+## Plot #3: ###########################################################################################################
 plot(ts(d$Sub_metering_1, freq=1440, start=5), ylab="Energy sub metering", xaxt="n")
 lines(ts(d$Sub_metering_2, freq=1440, start=5), col="red")
 lines(ts(d$Sub_metering_3, freq=1440, start=5), col="blue")
@@ -56,9 +56,8 @@ axis(1, at=c(5,6,7), labels=c("Thu", "Fri", "Sat"))
 dev.copy(png, file="plot3.png")
 dev.off()
 
-## Plot #4: ################## 
-
-## begin 2x2 plot
+## Plot #4: ###########################################################################################################
+# begin 2x2 plot
 par(mfrow=c(2,2))
 
 # plot #1
@@ -81,7 +80,7 @@ axis(1, at=c(5,6,7), labels=c("Thu", "Fri", "Sat"))
 plot(ts(d$Global_reactive_power, freq=1440, start=5), xlab="datetime", ylab="Global_reactive_power", xaxt="n")
 axis(1, at=c(5,6,7), labels=c("Thu", "Fri", "Sat"))
 
-## turn off 2x2
+# turn off 2x2
 par(mfrow=c(1,1))
 
 # save plot
