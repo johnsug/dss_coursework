@@ -1,4 +1,4 @@
-# dss splash
+# Data Science Specialization (dss) splash page
 Homework/projects/etc from Johns Hopkins / Coursera Data Science Specialization; see https://www.coursera.org/specialization/jhudatascience/1
 
 Future reading:
