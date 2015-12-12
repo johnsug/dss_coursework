@@ -38,6 +38,9 @@ df <- data.frame(pred1, pred2, pred3, Area=testing$Area)
 fit <- train(Area~., data=df, method="gam")
 pred <- predict(fit, df)
 
+## importance
+varImp(fit)
+
 ## pca
 preProcess(olive[-1], method="pca", thresh=0.9)
 ## also
