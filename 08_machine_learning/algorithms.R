@@ -74,11 +74,10 @@ pred <- predict(fit, df)
 library(elasticnet)
 fit <- enet(as.matrix(training[-1]), as.numeric(training[,1]), lambda=0) ## if lambda = 0, enet = lasso
 plot.enet(fit, xvar="penalty", use.color=TRUE)
-##
-fit <- train(Area~., data=training, method="lasso")
+## also
+fit <- train(Area~., data=training, method="lasso") ## ridge, lasso, relaxo
 pred <- predict(fit, testing)
 confusionMatrix(pred, testing$Area) 
-
 
 ## svm
 library(e1071)
