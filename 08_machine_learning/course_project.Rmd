@@ -1,0 +1,125 @@
+---
+title: "Practical Machine Learning Course Project"
+author: "johnsug"
+date: "December 19, 2015"
+output: html_document
+---
+
+## Overview
+
+The purpose of this project is to detail the development of a machine learning classification model, which will predict how users of athletic equipment performed various exercises. Using data recorded by accelerometers worn on six different users' belts, forearms, arms, and dumbbells, a model was developed to classify five classes of how users used athletic equipment (**sitting**, **sitting down**, **standing**, **standing up**, or **walking**), based on measurements of six individual's equipment behavior.
+
+The data comes from a [2013 study by Velloso, Bulling, Gellersen, Ugulino, and Fuks](http://groupware.les.inf.puc-rio.br/public/papers/2013.Velloso.QAR-WLE.pdf). More information on the project and data can be found here: http://groupware.les.inf.puc-rio.br/har.
+
+## Data Cleanup
+
+The [data set used to develop the model](https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv) had 19,622 observations with 159 covariates plus a dependent variable 'classe.' A [second data set](https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv) was also provided, with 20 observations, in order to validate the effectiveness of the model.
+
+```{r import_data, cache=TRUE}
+## read data
+data <- read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv")
+validation <- read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv")
+```
+
+152 of the 159 covariates were measurements taken on the individual's belt, arm, forearm, and dumbbell (38 measurements per situs). Of the remaining 7 covariates, only the user's name was kept while the other features (index number, three timestamp indicators, and training window indicators) were discarded as I felt these features would not be particularly useful in predicting exercise class.
+
+```{r drop_features}
+## drop unwanted features
+data <- data[!(names(data) %in% c("X", "raw_timestamp_part_1", "raw_timestamp_part_2", 
+                                  "cvtd_timestamp", "new_window", "num_window"))]
+```
+
+In addition, I discovered that 67 of the remaining 153 covariates were missing measurements for 98% of the observations. To build the most robust model possible, all variables with missing information were then eliminated, brining the final working data set to 87 total variables. This means we have approximately `r round(19622/87)` observations per variable in the dataset, suggesting that we have a sufficiently-large set of data for our predictive modeling.
+
+```{r drop_incomplete_features}
+## builds a quick data frame to check which variables are missing
+df <- data.frame(name=names(data), count=0, stringsAsFactors=FALSE)
+for(i in 1:nrow(df)){
+  df$count[i] <- sum(!is.na(data[,i]))
+}
+
+## keep only complete variables (those with no missing elements)
+data <- data[names(data) %in% c(df$name[df$count==nrow(data)])]
+```
+
+## Modeling
+
+With 19,622 observations, we have enough data to do a proper 60/40% training/testing split.
+
+```{r 60_40_split}
+## split into 60/40 training/testing sets
+library(caret)   ## needed for data partition formula
+set.seed(19622)  ## for reproducibility
+
+iii <- createDataPartition(1:nrow(data), p=.6)[[1]]
+training <- data[iii,]
+testing <- data[-iii,]
+```
+
+After the data was split, various machine learning methods were used to develop the predictive model. Ultimately, the method chosen to be deployed was a bagged ensemble of [C4.5 decision trees](https://en.wikipedia.org/wiki/C4.5_algorithm). This algorithm was selected based on its predictive power and its relative parsimony. Note, the C4.5 trees are implemented by way of the open-source J48 algorithm, available in the [RWeka](https://cran.r-project.org/web/packages/RWeka/index.html) R package.
+
+```{r modeling}
+library(RWeka)  ## R interface to Weka, for machine learning algorithms
+
+## train predictive model
+bagged_j48 <- Bagging(classe~., data=training, control=Weka_control(W=J48))
+```
+
+## Cross Validation / Out-of-Sample Error
+
+After the model was selected, cross validation was performed using the testing set, after which the out-of-sample error could be estimated.
+
+```{r cross_validation}
+## evaluate model performance using testing set for cross validation
+summary(bagged_j48, newdata=testing, class=TRUE)
+```
+
+As the testing data indicates, the model correctly classified the holdout data 97.9% of the time. Given that the validation set has 20 instances, we expect 20*.979, or 19.6, of the validation instances to be accurate. This means we can anticipate 19 to 20 of the 20 validaiton cases to be accurate.
+
+The "Detailed Accuracy By Class" table lists further accuracy metrics, most notable is the weighted average Average Area Under the ROC Curve ("Roc Area") metric of 0.999, implying that the expected true positive rate of the model is 99.9% given a randomly drawn sample.
+
+## Results
+
+The `predict` function will predict the classes for the 20 instances in the validation data set.
+
+```{r prediction}
+pred <- predict(bagged_j48, newdata=validation)
+pred
+```
+
+Let us compare the distribution of the predicted classes to the actual distribution in the full data set.
+
+```{r stacked_plot}
+library(ggplot2)
+library(scales)
+library(RColorBrewer)
+d1 <- data.frame(data="Full Dataset",
+                 freq=table(data$classe)/nrow(data))
+d2 <- data.frame(data="Validation",
+                 freq=table(pred)/20)
+names(d1) <- names(d2) <- c("data", "classe", "frequency")
+dat <- rbind(d1,d2)
+ggplot(dat, aes(x=data, y=frequency, fill=classe)) + geom_bar(stat="identity") + 
+  coord_flip() + scale_fill_brewer(palette="Spectral") + 
+  labs(x="Data", y="Cumulative Percent", title="Class Distributions") + 
+  scale_y_continuous(labels=percent)
+```
+
+The validation data has twice as many 'B's as does the full data, and roughly one-third of the 'C's and 'D's, although this variation is likely due to the very small sample size (n=20). In light of this, we should not be alarmed that the two distributions are not more similar.
+
+```{r save_predictions, echo=FALSE}
+ml_write_files = function(x){
+  n = length(x)
+  for(i in 1:n){
+    filename = paste0("problem_id_",i,".txt")
+    write.table(x[i],file=filename,quote=FALSE,row.names=FALSE,col.names=FALSE)
+  }
+}
+ml_write_files(as.character(pred))
+```
+
+As part of the class assignment, the 20 predictions need to be submitted to the class website. After submitting my predictions, I found I got 100% (all 20) correct. Due to my testing accuracy rate of 97.9%, I was expecting to get 19 to 20 correct, so the perfect accuracy in this small sample size was not expected. Note, I would not expect perfect predictive performance going forward with a larger sample size.
+
+## Conclusion
+
+Per the course requirements, this document details how I developed a predictive model using the exercise data set to predict which class of exercise was perform, based on a user's measurements from various body monitors. In this exercise, a boosted J48 decision tree was built off 19,622 observations and 86 features to predict the five class variables in the data. Due to the large data size, a very robust model was developed which boasted 97.9% accuracy, and a weighted-average AUROC of 0.999 when applied to a testing set of 40% of the data. When the same model was applied to the hold-out validation set of 20 observations, the model accurately predicted all exercise classes.
