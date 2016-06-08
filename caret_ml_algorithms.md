@@ -116,3 +116,7 @@ fit <- svm(Area~., data=training)
 pred <- predict(fit, testing)
 confusionMatrix(pred, testing$Area)
 ```
+
+## further reading
+
+* http://www.dataschool.io/comparing-supervised-learning-algorithms/ -- Comparing supervised learning algorithms
