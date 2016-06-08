@@ -90,5 +90,5 @@ read.spss(...)    ## SPSS
 read.xport(...)   ## SAS
 ```
 
-* other custom packages include: `twitteR, RFacebook, RGoogleMaps, ROpenSci`
-* for reading GIS data, look into the following packages: `rdgal, rgeos, raster`
+* other custom packages include: `twitteR`, `RFacebook`, `RGoogleMaps`, `ROpenSci`
+* for reading GIS data, look into the following packages: `rdgal`, `rgeos`, `raster`
