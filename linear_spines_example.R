@@ -19,4 +19,3 @@ zz <- lsp(x, 80)
 ## produces the same results
 summary(lm(y~x+z)) 
 summary(lm(y~x+zz))
-
