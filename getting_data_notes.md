@@ -1,4 +1,4 @@
-# course notes from Johns Hopkins University/Coursera's "Getting and Cleaning Data" class
+# course notes from Johns Hopkins University/Coursera's course on "Getting and Cleaning Data"
 
 ## reading local files
 ```{r}
