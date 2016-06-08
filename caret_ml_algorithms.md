@@ -58,16 +58,19 @@ pred <- predict(fit, testing)
 confusionMatrix(pred, testing$Area)
 ```
 
-## linear discriminant analysis -- assumes multivariate Gaussian with same covariates
+## linear discriminant analysis
+*assumes multivariate Gaussian with same covariates
 ```{r}
 fit <- train(Area~., data=training, method="lda")
 pred <- predict(fit, testing)
 confusionMatrix(pred, testing$Area)
 ```
 
-## quadratic discriminant analysis -- assumes multivariate Gaussian with DIFFERENT covariates
+## quadratic discriminant analysis
+*assumes multivariate Gaussian with DIFFERENT covariates
 
-## naive bayes -- assumes independence between features
+## naive bayes
+*assumes independence between features
 ```{r}
 fit <- train(Area~., data=training, method="nb")
 pred <- predict(fit, testing)
